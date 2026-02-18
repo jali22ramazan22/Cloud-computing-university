@@ -1,0 +1,30 @@
+Product Requirements Document: CSV File Parser
+================================================
+
+Feature: parse_csv() Function
+
+Description:
+Write a Python function called `parse_csv(filepath)` that reads a CSV file
+and returns its contents as a structured Python object.
+
+Requirements:
+
+1. FUNCTIONALITY
+   - The function must accept a single argument: `filepath` (string path to a CSV file).
+   - The function must return a `list of dictionaries`, where each dictionary
+     represents one row with column headers as keys.
+   - The function must use Python's built-in `csv` module (specifically `csv.DictReader`).
+
+2. ERROR HANDLING
+   - The function MUST handle `FileNotFoundError` gracefully.
+     If the file does not exist, return an empty list and print a warning message.
+   - The function MUST handle `PermissionError` gracefully.
+
+3. RESOURCE MANAGEMENT
+   - The function MUST use a context manager (`with` statement) to open files,
+     ensuring the file handle is always properly closed.
+
+4. SECURITY
+   - The function must NOT execute any shell commands or use `os.system()`.
+   - The function must NOT use `eval()` or `exec()` on any input data.
+   - The filepath parameter must be validated — no path traversal (e.g., "../../etc/passwd") allowed.
