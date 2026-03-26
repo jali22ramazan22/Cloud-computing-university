@@ -1,0 +1,52 @@
+:root {
+  /* Color Palette (Dark Finance Theme) */
+  --bg-primary: #0f1117;
+  --bg-secondary: #1a1d27;
+  --bg-bot: #1e2130;
+  --bg-user: #2563eb;
+  --bg-input: #272a38;
+  --text-primary: #e4e4e7;
+  --text-secondary: #9ca3af;
+  --accent: #3b82f6;
+  --accent-hover: #2563eb;
+  --accent-green: #22c55e;
+  --accent-orange: #f59e0b;
+  --accent-red: #ef4444;
+  --border: #2d3348;
+
+  --color-compute: #3b82f6;
+  --color-storage: #22c55e;
+  --color-bandwidth: #a855f7;
+  --color-database: #f59e0b;
+  --color-serverless: #ec4899;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body, html, #root {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Chat container scrolling hidden bar */
+.chat-scroll-container::-webkit-scrollbar {
+  width: 6px;
+}
+.chat-scroll-container::-webkit-scrollbar-thumb {
+  background-color: var(--border);
+  border-radius: 4px;
+}
+
+/* Base button resets */
+button {
+  font-family: inherit;
+}
